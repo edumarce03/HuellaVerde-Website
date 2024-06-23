@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Huella Verde - Login 🌿</title>
+    <link
+      rel="shortcut icon"
+      href="/src/img/logo-huellaverde.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/src/css/estilos.css" />
+  </head>
+  <body class="bg-[#e7ffc6] h-screen flex items-center justify-center">
+    <!-- Contenedor del Formulario -->
+    <div class="bg-white shadow-xl rounded-lg p-8 w-full max-w-md mx-4">
+      <!-- Espacio para el Logo -->
+      <div class="flex justify-center mb-6">
+        <a href="/src/index.html">
+          <img
+            src="/src/img/logo-huellaverde.png"
+            alt="Logo Huella Verde"
+            class="h-16"
+          />
+        </a>
+      </div>
+      <!-- Título -->
+      <h1 class="text-3xl font-bold text-center text-[#31572C] mb-4">
+        INICIAR SESIÓN
+      </h1>
+      <!-- Descripción -->
+      <p class="text-gray-600 text-center mb-8">
+        Ingresa tus credenciales para acceder:
+      </p>
+      <!-- Formulario -->
+      <form>
+        <div class="mb-6">
+          <label
+            for="usuario"
+            class="block text-sm font-medium text-gray-700 mb-2"
+            >Correo Electrónico</label
+          >
+          <input
+            type="email"
+            id="usuario"
+            placeholder="Ingresa tu correo electrónico"
+            class="border border-gray-300 rounded-md p-3 w-full text-base bg-slate-100 focus:outline-none focus:ring-2 focus:ring-[#518030]"
+          />
+        </div>
+        <div class="mb-6">
+          <label
+            for="contrasena"
+            class="block text-sm font-medium text-gray-700 mb-2"
+            >Contraseña</label
+          >
+          <input
+            type="password"
+            id="contrasena"
+            placeholder="Ingresa tu contraseña"
+            class="border border-gray-300 rounded-md p-3 w-full text-base bg-slate-100 focus:outline-none focus:ring-2 focus:ring-[#518030]"
+          />
+        </div>
+        <button
+          class="bg-[#518030] text-white rounded-md p-3 w-full font-bold hover:bg-[#31572C] transition-colors"
+        >
+          Iniciar sesión
+        </button>
+        <p class="text-center mt-4 text-sm">
+          No tienes una cuenta.
+          <a
+            href="/src/interfaces/register.html"
+            class="text-[#518030] font-semibold hover:underline"
+            >Regístrate</a
+          >
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
