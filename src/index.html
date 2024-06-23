@@ -21,11 +21,13 @@
       <div class="container mx-auto flex items-center justify-between">
         <!-- Logo -->
         <div class="flex items-center">
-          <img
-            src="img/logo-huellaverde.png"
-            alt="Huella Verde"
-            class="h-12 lg:h-20"
-          />
+          <a href="index.html">
+            <img
+              src="img/logo-huellaverde.png"
+              alt="Huella Verde"
+              class="h-12 lg:h-20"
+            />
+          </a>
         </div>
 
         <!-- Menú para dispositivos pequeños -->
@@ -37,46 +39,63 @@
 
         <!-- Menú principal -->
         <div class="hidden lg:flex lg:items-center lg:space-x-10">
-          <a href="#" class="text-white hover:text-gray-200 font-medium"
+          <a
+            href="index.html"
+            class="text-white hover:text-gray-200 font-medium"
             >Inicio</a
           >
-          <a href="#" class="text-white hover:text-gray-200 font-medium"
+          <a
+            href="interfaces/about.html"
+            class="text-white hover:text-gray-200 font-medium"
+            >About</a
+          >
+          <a
+            href="interfaces/articles-material.html"
+            class="text-white hover:text-gray-200 font-medium"
             >Artículos</a
           >
-          <a href="#" class="text-white hover:text-gray-200 font-medium"
+          <a
+            href="interfaces/calculator.html"
+            class="text-white hover:text-gray-200 font-medium"
             >Calculadora de Huella</a
           >
 
           <!-- Botón de Login -->
-          <button
+          <a
+            href="interfaces/login.html"
             class="bg-white text-[#036248] hover:bg-black hover:text-white font-bold text-sm p-3 rounded-md shadow-md"
           >
             Iniciar Sesión
-          </button>
+          </a>
         </div>
       </div>
 
       <!-- Menú desplegable para dispositivos pequeños -->
       <div id="menu" class="lg:hidden hidden mt-2 mb-2">
         <a
-          href="#"
+          href="index.html"
           class="block text-white py-2 px-4 hover:bg-green-600 font-medium"
           >Inicio</a
         >
         <a
-          href="#"
+          href="interfaces/about.html"
+          class="block text-white py-2 px-4 hover:bg-green-600 font-medium"
+          >About</a
+        >
+        <a
+          href="interfaces/articles-material.html"
           class="block text-white py-2 px-4 hover:bg-green-600 font-medium"
           >Artículos</a
         >
         <a
-          href="#"
+          href="interfaces/calculator.html"
           class="block text-white py-2 px-4 hover:bg-green-600 font-medium"
           >Calculadora de Huella</a
         >
         <button
           class="block bg-white text-[#036248] font-bold hover:bg-green-200 text-sm p-3 rounded-md shadow-md mt-2 ml-4"
         >
-          Iniciar Sesión
+          <a href="interfaces/login.html">Iniciar Sesión</a>
         </button>
       </div>
     </nav>
@@ -145,18 +164,18 @@
         <!-- Primera Columna -->
         <div>
           <!-- Título -->
-          <h2 class="my-5 font-poppins text-3xl font-bold md:text-4xl lg:my-8">
+          <h2 class="my-5 text-5xl font-bold md:text-6xl lg:my-8">
             Huella Verde. Tu Guía hacia una vida sostenible 🌿🌍.
           </h2>
           <!-- Párrafo -->
-          <p class="my-8 text-base md:text-lg font-poppins lg:my-10">
+          <p class="my-8 text-xl font-medium lg:my-10">
             Somos una plataforma educativa dedicada a informar y concientizar
             sobre la importancia de reducir nuestra huella de carbono y promover
             estilos de vida más sostenibles 🌱.
           </p>
           <!-- Botón Llamado a la Acción -->
           <button
-            class="my-5 bg-[#4F772D] hover:bg-[#31572C] rounded-md text-white font-semibold px-5 py-3 font-poppins shadow-md flex items-center"
+            class="my-5 bg-[#4F772D] hover:bg-[#31572C] rounded-md text-white font-semibold px-5 py-3 shadow-md flex items-center"
           >
             Explorar más
             <i
@@ -176,6 +195,117 @@
       </div>
     </section>
 
+    <!-- Tercera Sección -->
+    <section class="bg-[#78ba6e] py-20 md:py-40">
+      <div class="text-center mb-10">
+        <h1 class="text-5xl font-bold md:text-6xl text-white mb-4 mx-8 md:my-8">
+          Explora <span class="text-[#264423]">Nuestro Contenido ♻️</span>
+        </h1>
+        <p class="text-xl font-medium text-black mx-8 md:my-8">
+          Aprende más sobre nuestra misión, lee artículos educativos y utiliza
+          nuestra calculadora de huella de carbono para tomar acción 💚🌎.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-10">
+        <!-- Columna 1 -->
+        <div
+          class="relative h-80 lg:h-96 bg-cover bg-center"
+          style="background-image: url('img/img-1.png')"
+        >
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white p-4"
+          >
+            <h2 class="text-xl font-semibold mb-2">Sobre Nosotros</h2>
+            <p class="mb-4">
+              Conoce a nuestro equipo y descubre nuestra misión y visión para un
+              futuro sostenible.
+            </p>
+            <a href="interfaces/about.html">
+              <button
+                class="bg-[#4F772D] hover:bg-[#31572C] text-white font-bold py-2 px-4 rounded"
+              >
+                Leer más
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna 2 -->
+        <div
+          class="relative h-80 lg:h-96 bg-cover bg-center"
+          style="background-image: url('img/img-2.png')"
+        >
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white p-4"
+          >
+            <h2 class="text-xl font-semibold mb-2">Artículos</h2>
+            <p class="mb-4">
+              Infórmate y educa con nuestros artículos sobre conciencia
+              ambiental y sostenibilidad.
+            </p>
+            <a href="interfaces/articles-material.html">
+              <button
+                class="bg-[#4F772D] hover:bg-[#31572C] text-white font-bold py-2 px-4 rounded"
+              >
+                Leer más
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna 3 -->
+        <div
+          class="relative h-80 lg:h-96 bg-cover bg-center"
+          style="background-image: url('img/img-3.png')"
+        >
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white p-4"
+          >
+            <h2 class="text-xl font-semibold mb-2">Calculadora de Huella</h2>
+            <p class="mb-4">
+              Mide tu impacto ambiental y descubre cómo reducir tu huella de
+              carbono fácilmente.
+            </p>
+            <a href="interfaces/calculator.html">
+              <button
+                class="bg-[#4F772D] hover:bg-[#31572C] text-white font-bold py-2 px-4 rounded"
+              >
+                Leer más
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white rounded-lg shadow m-4 font-poppins">
+      <div
+        class="w-full mx-auto max-w-screen-xl p-8 md:flex md:items-center md:justify-between"
+      >
+        <span class="text-sm text-[#132A13] sm:text-center"
+          >© 2024
+          <a href="https://upao.edu.pe/" class="hover:underline">UPAO</a>.
+          Computación Visual - G1
+        </span>
+        <ul
+          class="flex flex-wrap items-center mt-3 text-sm font-normal text-[#132A13] sm:mt-0"
+        >
+          <li>
+            <a href="" class="hover:underline me-4 md:me-6">About</a>
+          </li>
+          <li>
+            <a href="" class="hover:underline me-4 md:me-6">Artículos</a>
+          </li>
+          <li>
+            <a href="" class="hover:underline me-4 md:me-6"
+              >Huella de Carbono</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
     <script src="scripts/index.js"></script>
   </body>
 </html>
