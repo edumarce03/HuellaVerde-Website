@@ -5,6 +5,177 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Huella Verde</title>
     <link rel="stylesheet" href="css/estilos.css" />
+    <link
+      rel="shortcut icon"
+      href="img/logo-huellaverde.png"
+      type="image/x-icon"
+    />
+    <script
+      src="https://kit.fontawesome.com/bb6c2a5170.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <!-- Navbar -->
+    <nav class="bg-[#31572C] p-4">
+      <div class="container mx-auto flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <img
+            src="img/logo-huellaverde.png"
+            alt="Huella Verde"
+            class="h-12 lg:h-20"
+          />
+        </div>
+
+        <!-- Menú para dispositivos pequeños -->
+        <div class="block lg:hidden">
+          <button id="menu-toggle" class="text-white focus:outline-none">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+
+        <!-- Menú principal -->
+        <div class="hidden lg:flex lg:items-center lg:space-x-10">
+          <a href="#" class="text-white hover:text-gray-200 font-medium"
+            >Inicio</a
+          >
+          <a href="#" class="text-white hover:text-gray-200 font-medium"
+            >Artículos</a
+          >
+          <a href="#" class="text-white hover:text-gray-200 font-medium"
+            >Calculadora de Huella</a
+          >
+
+          <!-- Botón de Login -->
+          <button
+            class="bg-white text-[#036248] hover:bg-black hover:text-white font-bold text-sm p-3 rounded-md shadow-md"
+          >
+            Iniciar Sesión
+          </button>
+        </div>
+      </div>
+
+      <!-- Menú desplegable para dispositivos pequeños -->
+      <div id="menu" class="lg:hidden hidden mt-2 mb-2">
+        <a
+          href="#"
+          class="block text-white py-2 px-4 hover:bg-green-600 font-medium"
+          >Inicio</a
+        >
+        <a
+          href="#"
+          class="block text-white py-2 px-4 hover:bg-green-600 font-medium"
+          >Artículos</a
+        >
+        <a
+          href="#"
+          class="block text-white py-2 px-4 hover:bg-green-600 font-medium"
+          >Calculadora de Huella</a
+        >
+        <button
+          class="block bg-white text-[#036248] font-bold hover:bg-green-200 text-sm p-3 rounded-md shadow-md mt-2 ml-4"
+        >
+          Iniciar Sesión
+        </button>
+      </div>
+    </nav>
+
+    <!-- Primera Sección -->
+    <section
+      class="hero-section h-screen flex items-center justify-center relative"
+    >
+      <!-- Video de fondo -->
+      <video
+        autoplay
+        muted
+        loop
+        class="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="video/video-hero-ambiental.mp4" type="video/mp4" />
+        <!-- Si el navegador no puede reproducir el video, proporciona una imagen de respaldo -->
+        <img
+          src="tu-imagen.jpg"
+          alt="Video de fondo"
+          class="object-cover w-full h-full"
+        />
+      </video>
+
+      <!-- Contenido del Hero -->
+      <div class="text-center text-white font-poppins relative mx-14 lg:mx-44">
+        <!-- Título -->
+        <h1
+          class="text-5xl font-bold mb-4 lg:text-8xl border-x-green-950 text-[#f4faf3]"
+          id="title-hero"
+        >
+          ¡Bienvenido a Huella Verde!
+        </h1>
+        <!-- Mensaje de Bienvenida -->
+        <p
+          class="text-lg mb-6 font-semibold lg:text-2xl border-x-green-950 text-[#f4faf3]"
+          id="paragraph-hero"
+        >
+          Descubre cómo puedes reducir tu huella de carbono y vivir de manera
+          más sostenible.
+        </p>
+        <!-- Contenedor para centrar el botón -->
+        <div class="flex justify-center">
+          <!-- Llamado a la Acción -->
+          <button
+            class="bg-[#4F772D] hover:bg-[#31572C] text-white font-semibold px-5 py-3 rounded-md shadow-lg transition duration-300 flex items-center"
+          >
+            Comenzar Ahora
+            <i
+              class="fa-solid fa-arrow-right ml-2 transition-transform duration-300 transform"
+              style="margin-top: 1px"
+            ></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Segunda Sección -->
+    <section
+      class="bg-section-presentation flex min-h-screen items-center justify-center"
+    >
+      <!-- Grid -->
+      <div
+        class="mx-24 my-16 grid grid-cols-1 items-center gap-8 md:grid-cols-1 md:gap-10 lg:mx-72 lg:grid-cols-2 lg:gap-20"
+      >
+        <!-- Primera Columna -->
+        <div>
+          <!-- Título -->
+          <h2 class="my-5 font-poppins text-3xl font-bold md:text-4xl lg:my-8">
+            Huella Verde. Tu Guía hacia una vida sostenible 🌿🌍.
+          </h2>
+          <!-- Párrafo -->
+          <p class="my-8 text-base md:text-lg font-poppins lg:my-10">
+            Somos una plataforma educativa dedicada a informar y concientizar
+            sobre la importancia de reducir nuestra huella de carbono y promover
+            estilos de vida más sostenibles 🌱.
+          </p>
+          <!-- Botón Llamado a la Acción -->
+          <button
+            class="my-5 bg-[#4F772D] hover:bg-[#31572C] rounded-md text-white font-semibold px-5 py-3 font-poppins shadow-md flex items-center"
+          >
+            Explorar más
+            <i
+              class="fa-solid fa-arrow-right ml-2 transition-transform duration-300 transform"
+              style="margin-top: 1px"
+            ></i>
+          </button>
+        </div>
+        <!-- Segunda Columna (Imagen) -->
+        <div class="flex items-center justify-center">
+          <img
+            src="img/fondo-hero-home.jpg"
+            alt="Descripción de la imagen"
+            class="object-contain rounded-md shadow-md"
+          />
+        </div>
+      </div>
+    </section>
+
+    <script src="scripts/index.js"></script>
+  </body>
 </html>
