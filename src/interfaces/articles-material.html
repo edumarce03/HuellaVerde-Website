@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Huella Verde - Artículos 🌿</title>
+    <link
+      rel="shortcut icon"
+      href="/src/img/logo-huellaverde.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/src/css/estilos.css" />
+    <script
+      src="https://kit.fontawesome.com/bb6c2a5170.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="bg-[#31572C] p-4">
+      <div class="container mx-auto flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="/src/index.html">
+            <img
+              src="/src/img/logo-huellaverde.png"
+              alt="Huella Verde"
+              class="h-12 lg:h-20"
+            />
+          </a>
+        </div>
+
+        <!-- Menú para dispositivos pequeños -->
+        <div class="block lg:hidden">
+          <button id="menu-toggle" class="text-white focus:outline-none">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+
+        <!-- Menú principal -->
+        <div class="hidden lg:flex lg:items-center lg:space-x-10">
+          <a
+            href="/src/index.html"
+            class="text-white hover:text-gray-200 font-medium"
+            >Inicio</a
+          >
+          <a
+            href="/src/interfaces/about.html"
+            class="text-white hover:text-gray-200 font-medium"
+            >About</a
+          >
+          <a
+            href="/src/interfaces/articles-material.html"
+            class="text-white hover:text-gray-200 font-medium"
+            >Artículos</a
+          >
+          <a
+            href="/src/interfaces/calculator.html"
+            class="text-white hover:text-gray-200 font-medium"
+            >Calculadora de Huella</a
+          >
+
+          <!-- Botón de Login -->
+          <a
+            href="/src/interfaces/login.html"
+            class="bg-white text-[#264423] hover:bg-black hover:text-white font-bold text-sm p-3 rounded-md shadow-md"
+          >
+            Iniciar Sesión
+          </a>
+        </div>
+      </div>
+
+      <!-- Menú desplegable para dispositivos pequeños -->
+      <div id="menu" class="lg:hidden hidden mt-2 mb-2">
+        <a
+          href="/src/index.html"
+          class="block text-white py-2 px-4 hover:bg-green-600 font-medium"
+          >Inicio</a
+        >
+        <a
+          href="/src/interfaces/about.html"
+          class="block text-white py-2 px-4 hover:bg-green-600 font-medium"
+          >About</a
+        >
+        <a
+          href="/src/interfaces/articles-material.html"
+          class="block text-white py-2 px-4 hover:bg-green-600 font-medium"
+          >Artículos</a
+        >
+        <a
+          href="/src/interfaces/calculator.html"
+          class="block text-white py-2 px-4 hover:bg-green-600 font-medium"
+          >Calculadora de Huella</a
+        >
+        <button
+          class="block bg-white text-[#264423] font-bold hover:bg-green-200 text-sm p-3 rounded-md shadow-md mt-2 ml-4"
+        >
+          <a href="/src/interfaces/login.html">Iniciar Sesión</a>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Primera Sección -->
+    <section class="flex items-center justify-center bg-white py-16 mx-10">
+      <!-- Grid -->
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <!-- Primera Columna - Contenido -->
+          <div class="flex flex-col justify-center">
+            <!-- Título -->
+            <h2 class="my-5 font-poppins text-4xl font-bold md:text-5xl">
+              Conservación Ambiental
+            </h2>
+            <!-- Filas de icono y texto -->
+            <div class="my-5 md:text-lg">
+              <!-- Fila 1 -->
+              <div class="mb-5 flex items-center font-poppins font-normal">
+                <i class="fas fa-circle-check mr-3 text-sm text-[#31572C]"></i>
+                <span class="text-[14px]"
+                  >Reducción del uso de plásticos y promoción de alternativas
+                  reutilizables.</span
+                >
+              </div>
+              <!-- Fila 2 -->
+              <div class="mb-5 flex items-center font-poppins font-normal">
+                <i class="fas fa-circle-check mr-3 text-sm text-[#31572C]"></i>
+                <span class="text-[14px]"
+                  >Organización de jornadas de limpieza en áreas
+                  naturales.</span
+                >
+              </div>
+              <!-- Fila 3 -->
+              <div class="mb-5 flex items-center font-poppins font-normal">
+                <i class="fas fa-circle-check mr-3 text-sm text-[#31572C]"></i>
+                <span class="text-[14px]"
+                  >Implementación de programas de reciclaje y reutilización de
+                  materiales.</span
+                >
+              </div>
+              <!-- Fila 4 -->
+              <div class="mb-5 flex items-center font-poppins font-normal">
+                <i class="fas fa-circle-check mr-3 text-sm text-[#31572C]"></i>
+                <span class="text-[14px]"
+                  >Participación en proyectos de reforestación y protección de
+                  hábitats.</span
+                >
+              </div>
+              <!-- Fila 5 -->
+              <div class="mb-5 flex items-center font-poppins font-normal">
+                <i class="fas fa-circle-check mr-3 text-sm text-[#31572C]"></i>
+                <span class="text-[14px]"
+                  >Promoción de la movilidad sostenible y reducción de
+                  emisiones.</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Segunda Columna - Video -->
+          <div class="flex items-center justify-center">
+            <!-- Aquí va el reproductor de video -->
+            <video
+              autoplay
+              loop
+              controls
+              muted
+              class="w-full h-auto max-w-full rounded-lg shadow-lg"
+              src="/src/video/video-material-3.mp4"
+            ></video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Segunda Sección -->
+    <section class="flex items-center justify-center bg-white py-16 mx-10">
+      <!-- Grid -->
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <!-- Columna Izquierda - Contenido -->
+          <div class="flex flex-col justify-center">
+            <!-- Título -->
+            <h2 class="my-5 font-poppins text-4xl font-bold md:text-5xl">
+              Nuestros Artículos
+            </h2>
+            <!-- Párrafo -->
+            <p class="mb-5 text-lg font-poppins">
+              Explora nuestros artículos sobre sostenibilidad y cuidado del
+              medio ambiente.
+            </p>
+            <!-- Tags -->
+            <div class="flex flex-wrap space-x-2">
+              <button
+                onclick="showArticle(1)"
+                class="bg-[#4F772D] text-white font-bold py-2 px-4 rounded"
+              >
+                Artículo 1 📰
+              </button>
+              <button
+                onclick="showArticle(2)"
+                class="bg-[#4F772D] text-white font-bold py-2 px-4 rounded"
+              >
+                Artículo 2 📰
+              </button>
+              <button
+                onclick="showArticle(3)"
+                class="bg-[#4F772D] text-white font-bold py-2 px-4 rounded"
+              >
+                Artículo 3 📰
+              </button>
+              <button
+                onclick="showArticle(4)"
+                class="bg-[#4F772D] text-white font-bold py-2 px-4 rounded"
+              >
+                Artículo 4 📰
+              </button>
+            </div>
+          </div>
+          <!-- Columna Derecha - Card -->
+          <div
+            id="articleCard"
+            class="flex flex-col items-center justify-center bg-white p-8 rounded-lg shadow-lg"
+          >
+            <!-- Título del Artículo -->
+            <h3 class="text-2xl font-semibold mb-4">Título del Artículo</h3>
+            <!-- Imagen del Artículo -->
+            <img
+              id="articleImage"
+              src="img/default.png"
+              alt="Imagen del Artículo"
+              class="w-full max-w-96 h-auto mb-4 rounded-lg"
+            />
+            <!-- Descripción del Artículo -->
+            <p id="articleDescription" class="mb-4 text-justify">
+              Descripción del artículo seleccionado aparecerá aquí.
+            </p>
+            <!-- Botón Leer Más -->
+            <div class="w-full flex justify-start">
+              <a
+                id="articleLink"
+                href="#"
+                target="_blank"
+                class="bg-[#4F772D] hover:bg-[#31572C] text-white font-bold py-2 px-4 rounded"
+              >
+                Leer más
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white rounded-lg shadow m-4 font-poppins">
+      <div
+        class="w-full mx-auto max-w-screen-xl p-8 md:flex md:items-center md:justify-between"
+      >
+        <span class="text-sm text-[#132A13] sm:text-center"
+          >© 2024
+          <a href="https://upao.edu.pe/" class="hover:underline">UPAO</a>.
+          Computación Visual - G1
+        </span>
+        <ul
+          class="flex flex-wrap items-center mt-3 text-sm font-normal text-[#132A13] sm:mt-0"
+        >
+          <li>
+            <a href="" class="hover:underline me-4 md:me-6">About</a>
+          </li>
+          <li>
+            <a href="" class="hover:underline me-4 md:me-6">Artículos</a>
+          </li>
+          <li>
+            <a href="" class="hover:underline me-4 md:me-6"
+              >Huella de Carbono</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="/src/scripts/index.js"></script>
+    <script src="/src/scripts/articles.js"></script>
+  </body>
+</html>
