@@ -64,8 +64,14 @@ document.addEventListener("DOMContentLoaded", function () {
       if (usuarioData && usuarioData.contrasena === contrasena) {
         console.log("Inicio de sesión exitoso.");
         alert("Inicio de sesión exitoso.");
+        // Mostrar nombre de usuario y correo en el banner de bienvenida
+        const userDetailsDiv = document.getElementById("userDetails");
+        userDetailsDiv.innerHTML = `
+          <p>Nombre de usuario: ${usuarioData.nombre}</p>
+          <p>Correo electrónico: ${usuario}</p>
+        `;
         // Redirigir o realizar alguna acción tras el login exitoso
-        window.location.href = "/src/index.html"; // Redirige al index u otra página tras el login exitoso
+        window.location.href = "/src/interfaces/userProfile.html"; // Redirige al index u otra página tras el login exitoso
       } else {
         console.error("Correo electrónico o contraseña incorrectos.");
         alert("Correo electrónico o contraseña incorrectos.");
