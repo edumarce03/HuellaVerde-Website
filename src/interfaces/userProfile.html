@@ -6,19 +6,297 @@
     <title>Huella Verde - UserProfile 🌿</title>
     <link rel="stylesheet" href="/src/css/estilos.css" />
   </head>
-  <body>
+  <body class="bg-[#e7ffc6]">
     <!-- Contenedor principal -->
     <div class="max-w-4xl mx-auto px-4 py-8">
-      <!-- Banner de bienvenida -->
-      <div class="bg-white shadow-lg rounded-lg p-8 mb-8">
-        <h1 class="text-3xl font-bold text-[#31572C] mb-4">Bienvenido</h1>
-        <div id="userDetails" class="text-gray-600"></div>
+      <!-- Banner de bienvenida y cerrar sesión -->
+      <div
+        class="bg-white shadow-lg rounded-lg p-8 mb-8 flex justify-between items-center"
+      >
+        <div>
+          <h1 class="text-3xl font-bold text-[#31572C] mb-4">Bienvenido</h1>
+          <p id="userDetails" class="text-black">prueba</p>
+        </div>
+        <button
+          id="logoutBtn"
+          class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Cerrar Sesión
+        </button>
       </div>
 
       <!-- Contenido adicional de la página -->
     </div>
+    <!-- Tabs -->
+    <div class="max-w-4xl mx-auto px-4 py-8">
+      <div class="bg-white shadow-lg rounded-lg p-8 mb-8">
+        <h2 class="text-2xl font-bold text-[#31572C] mb-4">
+          Calculadoras de Huella de Carbono
+        </h2>
+
+        <!-- Tabs -->
+        <div class="mb-4">
+          <ul class="flex border-b">
+            <li class="mr-1">
+              <a
+                class="bg-white inline-block py-2 px-4 text-[#31572C] font-semibold"
+                href="#"
+                data-tab="transport"
+                >Transporte</a
+              >
+            </li>
+            <li class="mr-1">
+              <a
+                class="bg-white inline-block py-2 px-4 text-[#31572C] font-semibold"
+                href="#"
+                data-tab="electricity"
+                >Electricidad</a
+              >
+            </li>
+            <li class="mr-1">
+              <a
+                class="bg-white inline-block py-2 px-4 text-[#31572C] font-semibold"
+                href="#"
+                data-tab="flight"
+                >Vuelos</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contenido de los tabs -->
+        <div id="tab-content">
+          <!-- Calculadora de Transporte -->
+          <div id="transport" class="tab-pane">
+            <h3 class="text-xl font-semibold text-[#31572C] mb-2">
+              Transporte
+            </h3>
+            <p class="mb-4 text-sm text-gray-600">
+              Calcula las emisiones de CO2 basadas en la distancia y el tipo de
+              transporte.
+            </p>
+            <form id="transport-form" class="space-y-4">
+              <div>
+                <label
+                  for="transport-distance"
+                  class="block text-sm font-medium text-gray-700"
+                  >Distancia (km):</label
+                >
+                <input
+                  type="number"
+                  id="transport-distance"
+                  name="distance"
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#31572C] focus:border-[#31572C]"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="transport-type"
+                  class="block text-sm font-medium text-gray-700"
+                  >Tipo de transporte:</label
+                >
+                <select
+                  id="transport-type"
+                  name="transport"
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#31572C] focus:border-[#31572C]"
+                  required
+                >
+                  <option value="car">Carro</option>
+                  <option value="bus">Bus</option>
+                  <option value="train">Tren</option>
+                  <option value="plane">Avión</option>
+                </select>
+              </div>
+              <button
+                type="submit"
+                class="bg-[#31572C] hover:bg-[#4A7C59] text-white font-bold py-2 px-4 rounded"
+              >
+                Calcular
+              </button>
+            </form>
+            <div
+              id="transport-result"
+              class="mt-4 text-black bg-gray-100 p-4 rounded-lg"
+            ></div>
+          </div>
+
+          <!-- Calculadora de Electricidad -->
+          <div id="electricity" class="tab-pane hidden">
+            <h3 class="text-xl font-semibold text-[#31572C] mb-2">
+              Electricidad
+            </h3>
+            <p class="mb-4 text-sm text-gray-600">
+              Estima las emisiones basadas en el consumo de electricidad.
+            </p>
+            <form id="electricity-form" class="space-y-4">
+              <div>
+                <label
+                  for="electricity-amount"
+                  class="block text-sm font-medium text-gray-700"
+                  >Consumo (kWh):</label
+                >
+                <input
+                  type="number"
+                  id="electricity-amount"
+                  name="amount"
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#31572C] focus:border-[#31572C]"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="electricity-country"
+                  class="block text-sm font-medium text-gray-700"
+                  >País:</label
+                >
+                <input
+                  type="text"
+                  id="electricity-country"
+                  name="country"
+                  value="us"
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#31572C] focus:border-[#31572C]"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="electricity-state"
+                  class="block text-sm font-medium text-gray-700"
+                  >Estado (solo para EE.UU.):</label
+                >
+                <input
+                  type="text"
+                  id="electricity-state"
+                  name="state"
+                  value="ca"
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#31572C] focus:border-[#31572C]"
+                />
+              </div>
+              <button
+                type="submit"
+                class="bg-[#31572C] hover:bg-[#4A7C59] text-white font-bold py-2 px-4 rounded"
+              >
+                Calcular
+              </button>
+            </form>
+            <div
+              id="electricity-result"
+              class="mt-4 text-black bg-gray-100 p-4 rounded-lg"
+            ></div>
+          </div>
+
+          <!-- Calculadora de Vuelos -->
+          <div id="flight" class="tab-pane hidden">
+            <h3 class="text-xl font-semibold text-[#31572C] mb-2">Vuelos</h3>
+            <p class="mb-4 text-sm text-gray-600">
+              Calcula las emisiones de CO2 para vuelos específicos.
+            </p>
+            <form id="flight-form" class="space-y-4">
+              <div>
+                <label
+                  for="flight-passengers"
+                  class="block text-sm font-medium text-gray-700"
+                  >Número de pasajeros:</label
+                >
+                <input
+                  type="number"
+                  id="flight-passengers"
+                  name="passengers"
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#31572C] focus:border-[#31572C]"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="flight-departure"
+                  class="block text-sm font-medium text-gray-700"
+                  >Aeropuerto de salida (código):</label
+                >
+                <input
+                  type="text"
+                  id="flight-departure"
+                  name="departure"
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#31572C] focus:border-[#31572C]"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="flight-arrival"
+                  class="block text-sm font-medium text-gray-700"
+                  >Aeropuerto de llegada (código):</label
+                >
+                <input
+                  type="text"
+                  id="flight-arrival"
+                  name="arrival"
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#31572C] focus:border-[#31572C]"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                class="bg-[#31572C] hover:bg-[#4A7C59] text-white font-bold py-2 px-4 rounded"
+              >
+                Calcular
+              </button>
+            </form>
+            <div
+              id="flight-result"
+              class="mt-4 text-black bg-gray-100 p-4 rounded-lg"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Script -->
     <script src="/src/scripts/auth.js"></script>
+    <script src="../scripts/api.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("DOM completamente cargado y analizado");
+
+        const userDetailsDiv = document.getElementById("userDetails");
+        const logoutBtn = document.getElementById("logoutBtn");
+        const currentUser = localStorage.getItem("currentUser");
+
+        console.log("Verificando usuario actual...");
+        if (currentUser) {
+          console.log(`Usuario actual encontrado: ${currentUser}`);
+          const usuarioData = JSON.parse(localStorage.getItem(currentUser));
+          if (usuarioData) {
+            console.log("Datos del usuario recuperados:", usuarioData);
+            userDetailsDiv.innerHTML = `<p>Nombre de usuario: ${usuarioData.nombre}</p>`;
+            console.log(
+              `Interfaz actualizada con el nombre de usuario: ${usuarioData.nombre}`
+            );
+          } else {
+            console.warn(
+              "Se encontró un usuario actual, pero no se pudieron recuperar sus datos"
+            );
+          }
+        } else {
+          console.log(
+            "No se encontró ningún usuario actual en el localStorage"
+          );
+        }
+
+        logoutBtn.addEventListener("click", function () {
+          console.log("Botón de cerrar sesión clickeado");
+
+          // Eliminar el usuario actual del localStorage
+          localStorage.removeItem("currentUser");
+          console.log("Usuario actual eliminado del localStorage");
+
+          // Redirigir al usuario a la página de inicio de sesión
+          console.log("Redirigiendo a la página de inicio de sesión...");
+          window.location.href = "/src/interfaces/login.html"; // Ajusta esta ruta según la estructura de tu proyecto
+        });
+
+        console.log("Configuración de la página de perfil completada");
+      });
+    </script>
   </body>
 </html>
